@@ -5,11 +5,15 @@ const product = () => {
   return (
     <Col lg="12">
       <Card>
-        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-          <i className="bi bi-card-text me-2"> </i>
-          Products
-
-          <Button className="inline-flex justify-content-between align-items-end">Add Product</Button>
+        <CardTitle
+          tag="h6"
+          className="border-bottom p-3 mb-0 d-inline-flex align-items-center justify-content-between"
+        >
+          <div>
+            <i className="bi bi-card-text me-2"> </i>
+            Products
+          </div>
+          <Button className="">Add Product</Button>
         </CardTitle>
         <CardBody className="">
           <Table bordered>
