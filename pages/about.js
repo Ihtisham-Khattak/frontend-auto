@@ -97,7 +97,7 @@ const About = () => {
         {/* --------------------------------------------------------------------------------*/}
         <Card>
           <CardBody>
-            <h4>Monster React Admin Pro Version</h4>
+            <h4>Ample React Admin Pro Version</h4>
             <p>
               5 premium and highly customizable demo variations included in the
               package, with React Router 6, Redux Toolkit, Axios nd much more...
@@ -108,7 +108,7 @@ const About = () => {
                 <div className="mt-3">
                   <Button
                     color="primary"
-                    href="https://wrappixel.com/templates/monster-react-admin/?ref=33"
+                    href="https://www.wrappixel.com/templates/ample-react-dashboard/?ref=33"
                     target="_blank"
                   >
                     Buy Now

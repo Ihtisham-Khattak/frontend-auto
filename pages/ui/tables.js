@@ -4,9 +4,7 @@ import ProjectTables from "../../src/components/dashboard/ProjectTable";
 const Tables = () => {
   return (
     <Row>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-1*/}
-      {/* --------------------------------------------------------------------------------*/}
+   
       <Col lg="12">
         <ProjectTables />
       </Col>

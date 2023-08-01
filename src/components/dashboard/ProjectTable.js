@@ -70,7 +70,7 @@ const ProjectTables = () => {
                 <th>Project</th>
 
                 <th>Status</th>
-                <th>Weeks</th>
+
                 <th>Budget</th>
               </tr>
             </thead>
@@ -102,7 +102,7 @@ const ProjectTables = () => {
                       <span className="p-2 bg-success rounded-circle d-inline-block ms-3" />
                     )}
                   </td>
-                  <td>{tdata.weeks}</td>
+
                   <td>{tdata.budget}</td>
                 </tr>
               ))}

@@ -4,70 +4,47 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const SalesChart = () => {
-  const options = {
-    chart: {
-      toolbar: {
-        show: false,
-      },
-      stacked: false,
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      show: true,
-      width: 4,
-      colors: ["transparent"],
-    },
-    legend: {
-      show: true,
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: "30%",
-        borderRadius: 2,
-      },
-    },
-    colors: ["#0d6efd", "#009efb", "#6771dc"],
-    xaxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-      ],
-    },
-    responsive: [
+  const chartoptions = {
+    series: [
       {
-        breakpoint: 1024,
-        options: {
-          plotOptions: {
-            bar: {
-              columnWidth: "30%",
-              borderRadius: 7,
-            },
-          },
-        },
+        name: "Iphone 13",
+        data: [0, 31, 40, 28, 51, 42, 109, 100],
+      },
+      {
+        name: "Oneplue 9",
+        data: [0, 11, 32, 45, 32, 34, 52, 41],
       },
     ],
-  };
-  const series = [
-    {
-      name: "2020",
-      data: [20, 40, 50, 30, 40, 50, 30, 30, 40],
-    },
-    {
-      name: "2022",
-      data: [10, 20, 40, 60, 20, 40, 60, 60, 20],
-    },
-  ];
+    options: {
+      chart: {
+        type: "area",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      grid: {
+        strokeDashArray: 3,
+        borderColor: "rgba(0,0,0,0.1)",
+      },
 
+      stroke: {
+        curve: "smooth",
+        width: 1,
+      },
+      xaxis: {
+        categories: [
+          "Jan",
+          "Feb",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "Aug",
+        ],
+      },
+    },
+  };
   return (
     <Card>
       <CardBody>
@@ -75,7 +52,13 @@ const SalesChart = () => {
         <CardSubtitle className="text-muted" tag="h6">
           Yearly Sales Report
         </CardSubtitle>
-        <Chart options={options} series={series} type="bar" height="379" />
+        <Chart
+          type="area"
+          width="100%"
+          height="390"
+          options={chartoptions.options}
+          series={chartoptions.series}
+        />
       </CardBody>
     </Card>
   );

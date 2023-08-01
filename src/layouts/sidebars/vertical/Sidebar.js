@@ -10,6 +10,11 @@ const navigation = [
     icon: "bi bi-speedometer2",
   },
   {
+    title: "Product",
+    href: "/ui/product",
+    icon: "bi bi-bucket",
+  },
+  {
     title: "Alert",
     href: "/ui/alerts",
     icon: "bi bi-bell",
@@ -89,24 +94,6 @@ const Sidebar = ({ showMobilemenu }) => {
               </Link>
             </NavItem>
           ))}
-          <Button
-            color="secondary"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/monster-next-js-free-admin-template/"
-          >
-            Download Free
-          </Button>
-          <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://wrappixel.com/templates/monster-react-admin/?ref=33"
-          >
-            Upgrade To Pro
-          </Button>
         </Nav>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import LogoDark from "../../assets/images/logos/monsterlogo.svg";
+import LogoDark from "../../assets/images/logos/amplelogo.svg";
 import Image from "next/image";
 import Link from "next/link";
 

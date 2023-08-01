@@ -14,7 +14,7 @@ import {
   Dropdown,
   Button,
 } from "reactstrap";
-import LogoWhite from "../../assets/images/logos/monsterlogowhite.svg";
+import LogoWhite from "../../assets/images/logos/amplelogowhite.svg";
 import user1 from "../../assets/images/users/user1.jpg";
 
 const Header = ({ showMobmenu }) => {
@@ -27,18 +27,18 @@ const Header = ({ showMobmenu }) => {
   };
 
   return (
-    <Navbar color="primary" dark expand="md">
+    <Navbar color="secondary" dark expand="md">
       <div className="d-flex align-items-center">
         <NavbarBrand href="/" className="d-lg-none">
           <Image src={LogoWhite} alt="logo" />
         </NavbarBrand>
-        <Button color="primary" className="d-lg-none" onClick={showMobmenu}>
+        <Button color="secondary" className="d-lg-none" onClick={showMobmenu}>
           <i className="bi bi-list"></i>
         </Button>
       </div>
       <div className="hstack gap-2">
         <Button
-          color="primary"
+          color="secondary"
           size="sm"
           className="d-sm-block d-md-none"
           onClick={Handletoggle}
@@ -76,7 +76,7 @@ const Header = ({ showMobmenu }) => {
           </UncontrolledDropdown>
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle color="primary">
+          <DropdownToggle color="secondary">
             <div style={{ lineHeight: "0px" }}>
               <Image
                 src={user1}
