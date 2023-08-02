@@ -1,5 +1,4 @@
 import { Button, Nav, NavItem } from "reactstrap";
-import Logo from "../../logo/Logo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -68,25 +67,13 @@ const Sidebar = ({ showMobilemenu }) => {
   return (
     <div className="p-3">
       <div className="d-flex align-items-center">
-        
-        <h2>J Autos</h2>
-        <Button
-          close
-          size="sm"
-          className="ms-auto d-lg-none d-sm-block"
-          onClick={showMobilemenu}
-        ></Button>
+        <h2 href="/" className="text-center mx-auto cursor-pointer">
+          J-Autos
+        </h2>
+        <div className="d-lg-none">
+          <Button close size="sm" onClick={showMobilemenu} />
+        </div>
       </div>
-
-      {/* <div className="d-flex align-items-center">
-        <h2>J Autos</h2>
-        <Button
-          close
-          size="sm"
-          className="ms-auto d-lg-none "
-          onClick={showMobilemenu}
-        ></Button>
-      </div> */}
 
       <div className="pt-4 mt-2">
         <Nav vertical className="sidebarNav">

@@ -28,11 +28,11 @@ const Header = ({ showMobmenu }) => {
 
   return (
     <Navbar color="secondary" dark expand="md">
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center justify-center">
         <NavbarBrand href="/" className="d-lg-none">
-          <Image src={LogoWhite} alt="logo" />
+          <h2 className="">J-Auto</h2>
         </NavbarBrand>
-        <Button color="secondary" className="d-lg-none" onClick={showMobmenu}>
+        <Button color="white" className="d-lg-none" onClick={showMobmenu}>
           <i className="bi bi-list"></i>
         </Button>
       </div>
