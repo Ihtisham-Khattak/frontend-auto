@@ -13,7 +13,7 @@ const product = () => {
             <i className="bi bi-card-text me-2"> </i>
             Products
           </div>
-          <Button className="">Add Product</Button>
+          <Button className="" href="/product/newProduct">Add Product</Button>
         </CardTitle>
         <CardBody className="">
           <Table bordered>

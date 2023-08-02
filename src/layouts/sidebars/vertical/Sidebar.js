@@ -54,11 +54,11 @@ const navigation = [
     href: "/ui/breadcrumbs",
     icon: "bi bi-link",
   },
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-people",
-  },
+  // {
+  //   title: "About",
+  //   href: "/about",
+  //   icon: "bi bi-people",
+  // },
 ];
 
 const Sidebar = ({ showMobilemenu }) => {
@@ -68,14 +68,26 @@ const Sidebar = ({ showMobilemenu }) => {
   return (
     <div className="p-3">
       <div className="d-flex align-items-center">
-        <Logo />
+        
+        <h2>J Autos</h2>
         <Button
           close
           size="sm"
-          className="ms-auto d-lg-none"
+          className="ms-auto d-lg-none d-sm-block"
           onClick={showMobilemenu}
         ></Button>
       </div>
+
+      {/* <div className="d-flex align-items-center">
+        <h2>J Autos</h2>
+        <Button
+          close
+          size="sm"
+          className="ms-auto d-lg-none "
+          onClick={showMobilemenu}
+        ></Button>
+      </div> */}
+
       <div className="pt-4 mt-2">
         <Nav vertical className="sidebarNav">
           {navigation.map((navi, index) => (
