@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Row,
   Card,
@@ -7,13 +7,15 @@ import {
   Col,
   Label,
   Input,
-  FormText,
   Button,
   Form,
   FormGroup,
 } from "reactstrap";
 
 const newProduct = () => {
+  const [productName, setProductName] = useState("");
+  const [productDescription, setProductDescription] = useState("");
+  const [productPrice, setProductPrice] = useState("");
   return (
     <Row>
       <Col>
@@ -24,27 +26,38 @@ const newProduct = () => {
           <CardBody>
             <Form>
               <FormGroup>
-                <Label for="exampleEmail">Email</Label>
+                <Label for="exampleEmail">Name</Label>
                 <Input
                   id="exampleEmail"
-                  name="email"
-                  placeholder="with a placeholder"
-                  type="email"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input
-                  id="examplePassword"
-                  name="password"
-                  placeholder="password placeholder"
-                  type="password"
+                  name="productName"
+                  placeholder="Product name"
+                  type="text"
+                  onChange={setProductName((e) => e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup>
-                <Label for="exampleText">Text Area</Label>
-                <Input id="exampleText" name="text" type="textarea" />
+                <Label for="exampleText">Description</Label>
+                <Input
+                  id="exampleText"
+                  name="productDescription"
+                  type="textarea"
+                  placeholder="Product Description"
+                  onChange={setProductDescription((e) =>
+                    setProductDescription(e.target.value)
+                  )}
+                />
+              </FormGroup>
+
+              <FormGroup>
+                <Label for="examplePassword">Price</Label>
+                <Input
+                  id="examplePassword"
+                  name="number"
+                  placeholder="Product Price"
+                  type="number"
+                  min="0"
+                />
               </FormGroup>
 
               <Button>Submit</Button>

@@ -1,25 +1,20 @@
-import React from "react";
-import Link from "next/link";
+import React, {useState} from "react";
 import Image from "next/image";
 import {
   Navbar,
   Collapse,
-  Nav,
-  NavItem,
   NavbarBrand,
-  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   Dropdown,
   Button,
 } from "reactstrap";
-import LogoWhite from "../../assets/images/logos/amplelogowhite.svg";
 import user1 from "../../assets/images/users/user1.jpg";
 
 const Header = ({ showMobmenu }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const Handletoggle = () => {
@@ -46,35 +41,13 @@ const Header = ({ showMobmenu }) => {
           {isOpen ? (
             <i className="bi bi-x"></i>
           ) : (
-            <i className="bi bi-three-dots-vertical"></i>
+            <i className="bi bi-three-dots-vertical">ICons</i>
           )}
         </Button>
       </div>
 
       <Collapse navbar isOpen={isOpen}>
-        <Nav className="me-auto" navbar>
-          <NavItem>
-            <Link href="/">
-              <a className="nav-link">Starter</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/about">
-              <a className="nav-link">About</a>
-            </Link>
-          </NavItem>
-          <UncontrolledDropdown inNavbar nav>
-            <DropdownToggle caret nav>
-              DD Menu
-            </DropdownToggle>
-            <DropdownMenu end>
-              <DropdownItem>Option 1</DropdownItem>
-              <DropdownItem>Option 2</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Reset</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </Nav>
+        <div className="me-auto" />
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="secondary">
             <div style={{ lineHeight: "0px" }}>
@@ -88,12 +61,6 @@ const Header = ({ showMobmenu }) => {
             </div>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem header>Info</DropdownItem>
-            <DropdownItem>My Account</DropdownItem>
-            <DropdownItem>Edit Profile</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>My Balance</DropdownItem>
-            <DropdownItem>Inbox</DropdownItem>
             <DropdownItem>Logout</DropdownItem>
           </DropdownMenu>
         </Dropdown>
