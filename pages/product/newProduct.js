@@ -11,6 +11,7 @@ import {
   Form,
   FormGroup,
 } from "reactstrap";
+import confirmation from "../../src/components/confirmation";
 
 const newProduct = () => {
   const [productName, setProductName] = useState("");
@@ -29,10 +30,10 @@ const newProduct = () => {
                 <Label for="exampleEmail">Name</Label>
                 <Input
                   id="exampleEmail"
-                  name="productName"
+                  name={productName}
                   placeholder="Product name"
                   type="text"
-                  onChange={setProductName((e) => e.target.value)}
+                  onChange={(e) => setProductName(e.target.value)}
                 />
               </FormGroup>
 
@@ -40,27 +41,30 @@ const newProduct = () => {
                 <Label for="exampleText">Description</Label>
                 <Input
                   id="exampleText"
-                  name="productDescription"
+                  name={productDescription}
                   type="textarea"
                   placeholder="Product Description"
-                  onChange={setProductDescription((e) =>
-                    setProductDescription(e.target.value)
-                  )}
+                  onChange={(e) => setProductDescription(e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup>
                 <Label for="examplePassword">Price</Label>
                 <Input
-                  id="examplePassword"
-                  name="number"
+                  name={productPrice}
                   placeholder="Product Price"
                   type="number"
                   min="0"
+                  onChange={(e) => setProductPrice(e.target.value)}
                 />
               </FormGroup>
 
-              <Button>Submit</Button>
+              <Button type="button">Submit</Button>
+              <confirmation
+                show={showModal}
+                onClose={handleCloseModal}
+                onConfirm={handleConfirmAction}
+              />
             </Form>
           </CardBody>
         </Card>
