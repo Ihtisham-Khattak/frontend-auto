@@ -11,12 +11,30 @@ import {
   Form,
   FormGroup,
 } from "reactstrap";
-import confirmation from "../../src/components/confirmation";
+import ConfirmationModal from "../../src/components/Confirmation";
+// import Confirmation from "../../src/components/Confirmation";
+// import Confirmation from "../../src/components/Confirmation"
 
 const newProduct = () => {
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [productPrice, setProductPrice] = useState("");
+  debugger;
+  const [showModel, setShowModel] = useState(false);
+
+  const handleShowModel = () => {
+    setShowModel(true);
+  };
+
+  const handleCloseModel = () => {
+    setShowModel(false);
+  };
+
+  const handleConfirmationModel = () => {
+    //Write the logice here
+    handleCloseModel();
+  };
+
   return (
     <Row>
       <Col>
@@ -59,12 +77,15 @@ const newProduct = () => {
                 />
               </FormGroup>
 
-              <Button type="button">Submit</Button>
-              <confirmation
-                show={showModal}
-                onClose={handleCloseModal}
-                onConfirm={handleConfirmAction}
-              />
+              <Button type="button" onClick={handleShowModel}>
+                Submit
+              </Button>
+              <ConfirmationModal />
+              {/* <Confirmation
+                show={showModel}
+                onClose={handleCloseModel}
+                onConfirm={handleConfirmationModel}
+              /> */}
             </Form>
           </CardBody>
         </Card>
