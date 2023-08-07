@@ -11,9 +11,6 @@ import {
   Form,
   FormGroup,
 } from "reactstrap";
-import ConfirmationModal from "../../src/components/Confirmation";
-// import Confirmation from "../../src/components/Confirmation";
-// import Confirmation from "../../src/components/Confirmation"
 
 const newProduct = () => {
   const [productName, setProductName] = useState("");
@@ -80,12 +77,7 @@ const newProduct = () => {
               <Button type="button" onClick={handleShowModel}>
                 Submit
               </Button>
-              <ConfirmationModal />
-              {/* <Confirmation
-                show={showModel}
-                onClose={handleCloseModel}
-                onConfirm={handleConfirmationModel}
-              /> */}
+            
             </Form>
           </CardBody>
         </Card>
