@@ -14,6 +14,31 @@ const navigation = [
     icon: "bi bi-bucket",
   },
   {
+    title: "Categories",
+    href: "/ui/catogries",
+    icon: "bi bi-bucket",
+  },
+  {
+    title: "Orders",
+    href: "/ui/order",
+    icon: "bi bi-bucket",
+  },
+  {
+    title: "Admin",
+    href: "/ui/admin",
+    icon: "bi bi-bucket",
+  },
+  {
+    title: "Setting",
+    href: "/ui/setting",
+    icon: "bi bi-bucket",
+  },
+  {
+    title: "Logout",
+    href: "/ui/logout",
+    icon: "bi bi-bucket",
+  },
+  {
     title: "Alert",
     href: "/ui/alerts",
     icon: "bi bi-bell",
@@ -87,8 +112,8 @@ const Sidebar = ({ showMobilemenu }) => {
                       : "nav-link text-secondary py-3"
                   }
                 >
-                  <i className={navi.icon}></i>
                   <span className="ms-3 d-inline-block">{navi.title}</span>
+                <i className={navi.icon}></i>
                 </a>
               </Link>
             </NavItem>

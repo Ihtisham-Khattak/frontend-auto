@@ -1,22 +1,22 @@
 import FullLayout from "../src/layouts/FullLayout";
 import Head from "next/head";
 import "../styles/style.scss";
+import { SessionProvider } from "next-auth/react";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
-      <Head>
-        <title>Ample Admin Next Js Free Aadmin Dashboard </title>
-        <meta
-          name="description"
-          content="Ample Admin Next Js Aadmin Dashboard "
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SessionProvider session={session}>
+        <Head>
+          <title>J Autos Store </title>
+          <meta name="description" content="J-Auto automobile store" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <FullLayout>
-        <Component {...pageProps} />
-      </FullLayout>
+        <FullLayout>
+          <Component {...pageProps} />
+        </FullLayout>
+      </SessionProvider>
     </>
   );
 }
