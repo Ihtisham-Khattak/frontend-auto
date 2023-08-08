@@ -35,7 +35,7 @@ const navigation = [
   },
   {
     title: "Logout",
-    href: "/ui/logout",
+    href: "/ui/login",
     icon: "bi bi-bucket",
   },
   {
