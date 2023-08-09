@@ -113,7 +113,7 @@ const Sidebar = ({ showMobilemenu }) => {
                   }
                 >
                   <span className="ms-3 d-inline-block">{navi.title}</span>
-                <i className={navi.icon}></i>
+                <i className={navi.icon} style={{ display: 'inline-block', width: '16px', height: '16px' }}></i>
                 </a>
               </Link>
             </NavItem>
