@@ -1,6 +1,8 @@
 import { Button, Nav, NavItem } from "reactstrap";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Login from "../../../../pages/ui/login";
+import { useState } from "react";
 
 const navigation = [
   {
@@ -89,6 +91,12 @@ const Sidebar = ({ showMobilemenu }) => {
   let curl = useRouter();
   const location = curl.pathname;
 
+  debugger;
+  const [logOut, setLogOut] = useState(false);
+  const handleLogOut = () => {
+    setLogOut(true);
+  };
+
   return (
     <div className="p-3">
       <div className="d-flex align-items-center">
@@ -114,13 +122,17 @@ const Sidebar = ({ showMobilemenu }) => {
                 >
                   <span className="ms-3 d-inline-block">
                     {/* <i className={navi.icon}></i> */}
-                
+
                     {navi.title}
                   </span>
                 </a>
               </Link>
             </NavItem>
           ))}
+          <NavItem>
+            <Button onClick={handleLogOut}> {logOut && <Login />}</Button>
+           
+          </NavItem>
         </Nav>
       </div>
     </div>
